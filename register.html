@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .container { max-width: 420px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+    label { display:block; margin-top: 10px; }
+    input { width:100%; height:38px; border:1px solid #aaa; border-radius: 8px; padding: 8px; margin-top:6px; }
+    .btn { width:100%; height:42px; background:#000; color:#fff; border:0; border-radius:10px; margin-top:14px; cursor:pointer; }
+    .note { font-size: 12px; color:#555; margin-top: 8px; }
+  </style>
+</head>
+<body class="register_page">
+  <div class="nav">
+    <p>Glamora.inc</p>
+    <a href="index.html">Home</a>
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="kids.html">Kids</a>
+    <a href="beauty.html">Beauty</a>
+    <a href="cart.html">Cart</a>
+  </div>
+  <div class="container">
+    <h2 style="text-align:center;">Login</h2>
+    <label>Mobile or Username</label>
+    <input id="loginId" type="text" placeholder="mobile (8-15 digits) or username"/>
+    <label>Password</label>
+    <input id="loginPass" type="password" placeholder="password"/>
+    <button id="loginBtn" class="btn">Login</button>
+    <p class="note">No server required: this demo stores users in your browser only. <a href="signup.html">Create account</a></p>
+  </div>
+<script>
+// Client-side login compatible with GitHub Pages (uses localStorage)
+const USERS_KEY = 'glamora_users';
+const CURRENT_USER_KEY = 'glamora_current_user';
+
+function getUsers(){ try { return JSON.parse(localStorage.getItem(USERS_KEY) || '[]'); } catch { return []; } }
+function setCurrentUser(user){ localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(user)); }
+
+function showError(msg){ alert(msg); }
+
+document.getElementById('loginBtn').addEventListener('click', function(){
+  const id = (document.getElementById('loginId').value || '').trim();
+  const pass = document.getElementById('loginPass').value;
+  if (!id || !pass) return showError('Enter login and password.');
+  const users = getUsers();
+  // Allow login by mobile or username (we only stored mobile + name in signup)
+  const user = users.find(u => u.mobile === id || (u.username && u.username === id));
+  if (!user) return showError('Account not found. Try your mobile used during signup.');
+  if (user.password !== pass) return showError('Incorrect password.');
+  const { password, ...publicUser } = user;
+  setCurrentUser(publicUser);
+  alert('Login successful!');
+  window.location.href = 'index.html';
+});
+</script>
+</body>
+</html>
+
+

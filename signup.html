@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>signup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="register_page">
+
+  <div class="nav">
+    <p>Glamora.inc</p>
+    <a href="index.html">Home</a>
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="kids.html">Kids</a>
+    <a href="beauty.html">Beauty</a>
+    <a href="register.html">login</a>
+  </div>
+
+  <div class="signup">
+    <h1 id="welcome">Welcome to Glamora!</h1>
+    <div class="details">
+      
+        <p>Firstname <span class="required">*</span></p>
+        <input type="text" id="Firstname" name="firstname" placeholder="Firstname" required />
+
+        <p>Lastname <span class="required">*</span></p>
+        <input type="text" id="Lastname" name="lastname" placeholder="Lastname" required />
+
+        <p>Mobile no. <span class="required">*</span></p>
+        <input type="tel" id="Mobile" name="mobile" placeholder="Mobile" required />
+
+        <p>Password <span class="required">*</span></p>
+        <input type="password" id="password" name="password" placeholder="Password" required />
+
+        <p>Confirm password <span class="required">*</span></p>
+        <input
+          type="password"
+          id="cpassword"
+          name="cpassword"
+          placeholder="Confirm password"
+          required
+        />
+
+        <button id="signupBtn" type="button">Sign up</button>
+        <p style="margin-top:10px;">Already have an account? <a href="register.html">Login</a></p>
+    </div>
+  </div>
+
+<script>
+// Simple client-side signup (GitHub Pages friendly)
+const USERS_KEY = 'glamora_users';
+const CURRENT_USER_KEY = 'glamora_current_user';
+
+function getUsers(){
+  try { return JSON.parse(localStorage.getItem(USERS_KEY) || '[]'); } catch { return []; }
+}
+function setUsers(users){ localStorage.setItem(USERS_KEY, JSON.stringify(users)); }
+function setCurrentUser(user){ localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(user)); }
+
+function showError(msg){ alert(msg); }
+function trim(s){ return (s || '').toString().trim(); }
+
+document.getElementById('signupBtn').addEventListener('click', function(){
+  const first = trim(document.getElementById('Firstname').value);
+  const last = trim(document.getElementById('Lastname').value);
+  const mobile = trim(document.getElementById('Mobile').value);
+  const pass = document.getElementById('password').value;
+  const cpass = document.getElementById('cpassword').value;
+
+  if (!first || !last || !mobile || !pass || !cpass) return showError('Please fill all required fields.');
+  if (!/^\d{8,15}$/.test(mobile.replace(/\D/g,''))) return showError('Enter a valid mobile number (8-15 digits).');
+  if (pass.length < 6) return showError('Password must be at least 6 characters.');
+  if (pass !== cpass) return showError('Passwords do not match.');
+
+  const users = getUsers();
+  const exists = users.some(u => u.mobile === mobile);
+  if (exists) return showError('An account with this mobile already exists.');
+
+  const user = { first, last, mobile, createdAt: new Date().toISOString() };
+  users.push({ ...user, password: pass });
+  setUsers(users);
+  setCurrentUser(user);
+  alert('Signup successful!');
+  window.location.href = 'index.html';
+});
+</script>
+
+</body>
+</html>

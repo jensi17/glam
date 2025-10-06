@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Fashion - Glamora.inc</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        /* Basic styling for demonstration. You should refine this in your style.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        .nav {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav p {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .sale3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sale3 h1 {
+            padding: 15px;
+            color: #333;
+        }
+        .sale3 img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Remove extra space below image */
+            margin: 0 auto; /* Center the image */
+        }
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        /* Product Grid Styling */
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            gap: 25px; /* Space between product cards */
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            width: 280px; /* Fixed width for the card, adjust as needed */
+            text-align: center;
+            padding-bottom: 15px;
+            transition: transform 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribute space vertically */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .product-card img {
+            width: 100%; /* Image takes full width of its container */
+            height: 300px; /* Fixed height for consistent image display */
+            object-fit: cover; /* Ensures images cover the area without distortion */
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .product-info {
+            padding: 0 15px;
+            flex-grow: 1; /* Allows this div to take up available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-name {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 1.2em;
+            color: #e60023; /* A common color for prices */
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+
+         /*footer*/
+        .main-content {
+            flex: 1; 
+        }
+
+    </style>
+</head>
+<body class="register2page">
+    <div class="nav">
+        <p>Glamora.inc</p>
+         <a href="home.html">Home</a>
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="beauty.html">Beauty</a>
+        <a href="register.html">Login</a>
+        <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="sale3">
+        <h1 style="text-align: center; padding: 15px;">Define Your Style – Shop Men’s Fashion!</h1>
+        
+    </div>
+
+    <h2>Men's Categories To Bag</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/7/1/710c8aeCOHMW010SHOLG_1.jpg?rnd=20200526195200&tr=w-512" alt="Men's Casual Shirt">
+            <div class="product-info">
+                <div class="product-name">Stylish Casual Shirt</div>
+                <div class="product-price">₹ 1399</div>
+  <div class="but">
+                <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Stylish Casual Shirt">
+    <input type="hidden" name="product_price" value="1399">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/5/a5c156aUSSHTP0866_1.jpg?rnd=20200526195200&tr=w-512" alt="shirt">
+            <div class="product-info">
+                <div class="product-name">Formal shirt</div>
+                <div class="product-price">₹ 1899</div>
+            
+  <div class="but">
+               <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Formal Shirt">
+    <input type="hidden" name="product_price" value="1899">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/3/a306fee68709301_1.jpg?rnd=20200526195200&tr=w-512" alt="Men's Polo T-shirt">
+            <div class="product-info">
+                <div class="product-name">Comfortable puma T-shirt</div>
+                <div class="product-price">₹ 1749</div>
+                        
+  <div class="but">
+                <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Comfortable puma T-shirtt">
+    <input type="hidden" name="product_price" value="1749">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/0/a0d5890JP4420_2.jpg?tr=w-512" alt="Men's Bomber Jacket">
+            <div class="product-info">
+                <div class="product-name">Trendy Bomber Jacket</div>
+                <div class="product-price">₹ 2499</div>
+                                 
+  <div class="but">
+                <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Trendy Bomber Jacket">
+    <input type="hidden" name="product_price" value="2499">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/d/0/d064fd363077601Black_1.jpg?rnd=20200526195200&tr=w-512" alt="Men's Chinos">
+            <div class="product-info">
+                <div class="product-name"> Black Codeset</div>
+                <div class="product-price">₹ 1399</div>
+                                   
+  <div class="but">
+               <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Black Codeset">
+    <input type="hidden" name="product_price" value="1399">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+           
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/1/11031b2Images68709201_1.jpg?rnd=20200526195200&tr=w-512" alt="Men's Hoodie">
+            <div class="product-info">
+                <div class="product-name">puma tshirt</div>
+                <div class="product-price">₹ 1699</div>
+                                   
+  <div class="but">
+              <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="puma tshirt">
+    <input type="hidden" name="product_price" value="1699">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+
+                <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <h2>Shop Men's Accessories</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/b/1/b179d3bM-CH-10048-24-7-S_0.jpg?rnd=20200526195200&tr=w-512" alt="Men's Watch">
+            <div class="product-info">
+                <div class="product-name">Classic silver chain</div>
+                <div class="product-price">₹ 2999</div>
+                                   
+  <div class="but">
+               <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Classic silver chain">
+    <input type="hidden" name="product_price" value="2999">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/6/9/693b7118903496186178_1.jpg?rnd=20200526195200&tr=w-512" alt="Men's Leather Wallet">
+            <div class="product-info">
+                <div class="product-name">Genuine Leather Wallet</div>
+                <div class="product-price">₹ 899</div>
+                                   
+  <div class="but">
+               <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Genuine Leather Wallet">
+    <input type="hidden" name="product_price" value="899">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/b/c/bc377775488801_1.jpg?rnd=20200526195200&tr=w-512" alt="Men's Belt">
+            <div class="product-info">
+                <div class="product-name">Stylish Formal Belt</div>
+                <div class="product-price">₹ 599</div>
+                                
+  <div class="but">
+                 <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Stylish Formal Belt">
+    <input type="hidden" name="product_price" value="599">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/e/5e6c1a9NK_VOYAG00000080_1.jpg?rnd=20200526195200&tr=w-512" alt="Men's Sunglasses">
+            <div class="product-info">
+                <div class="product-name">Polarized Aviator Sunglasses</div>
+                <div class="product-price">₹ 1799</div>
+                                 
+  <div class="but">
+                 <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Polarized Aviator Sunglasses">
+    <input type="hidden" name="product_price" value="1799">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                  </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/d/7/d7aebc3NK_PUMAX00192936_1.jpg?rnd=20200526195200&tr=w-512" alt="Men's Tie">
+            <div class="product-info">
+                <div class="product-name">Bag</div>
+                <div class="product-price">₹ 499</div>
+                               
+  <div class="but">
+                 <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Bag">
+    <input type="hidden" name="product_price" value="499">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/b/4/b4286dd7002-0201-BLACK_2.jpg?tr=w-512" alt="Men's Backpack">
+            <div class="product-info">
+                <div class="product-name">Socks</div>
+                <div class="product-price">₹490</div>
+                                   
+  <div class="but">
+                <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Socks">
+    <input type="hidden" name="product_price" value="490">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Formal Wear Collection for Men</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://media.landmarkshops.in/cdn-cgi/image/h=831,w=615,q=85,fit=cover/lifestyle/1000014489726-Maroon-Red-1000014489726_01-2100.jpg" alt="Men's Suit">
+            <div class="product-info">
+                <div class="product-name">Tailored Two-Piece Suit</div>
+                <div class="product-price">₹ 8999</div>
+                                 
+  <div class="but">
+                 <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Tailored Two-Piece Suit">
+    <input type="hidden" name="product_price" value="8999">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/1/51ebc7aAgnes-3394_Green_1.jpg?rnd=20200526195200&tr=w-512" alt="Men's Dress Shirt">
+            <div class="product-info">
+                <div class="product-name">Crisp Cotton Dress Shirt</div>
+                <div class="product-price">₹ 1299</div>
+                                  
+  <div class="but">
+                <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Crisp Cotton Dress Shirt">
+    <input type="hidden" name="product_price" value="1299">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://styleunion.in/cdn/shop/files/MFTR00029ASH_1.jpg?v=1751293531&width=1200" alt="Men's Formal Trousers">
+            <div class="product-info">
+                <div class="product-name">Classic Formal Trousers</div>
+                <div class="product-price">₹ 1599</div>
+                                
+  <div class="but">
+               <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Classic Formal Trousers">
+    <input type="hidden" name="product_price" value="1599">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://media.landmarkshops.in/cdn-cgi/image/h=831,w=615,q=85,fit=cover/lifestyle/1000014490788-Brown-Brown-1000014490788_01-2100.jpg" alt="Men's Blazer">
+            <div class="product-info">
+                <div class="product-name">Smart Formal Blazer</div>
+                <div class="product-price">₹ 4499</div>
+                                  
+  <div class="but">
+                   <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Smart Formal Blaze">
+    <input type="hidden" name="product_price" value="4499">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://media.landmarkshops.in/cdn-cgi/image/h=831,w=615,q=85,fit=cover/lifestyle/1000013385014-Red-Red-1000013385014_01-2100.jpg" alt="Men's Waistcoat">
+            <div class="product-info">
+                <div class="product-name">sweatshirt</div>
+                <div class="product-price">₹ 2199</div>
+                                   
+  <div class="but">
+               <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="sweatshirt">
+    <input type="hidden" name="product_price" value="2199">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://media-uk.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000011314809-White-White-1000011314809_01-2100.jpg" alt="Men's Formal Shoes">
+            <div class="product-info">
+                <div class="product-name">Premium  Oxfords</div>
+                <div class="product-price">₹ 3799</div>
+                                   
+  <div class="but">
+                 <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Premium  Oxfords">
+    <input type="hidden" name="product_price" value="3799">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Casual Wear & Everyday Style for Men</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://media.landmarkshops.in/cdn-cgi/image/h=831,w=615,q=85,fit=cover/lifestyle/1000014683108-Blue-Blue-1000014683108_01-2100.jpg" alt="Men's Graphic Tee">
+            <div class="product-info">
+                <div class="product-name">Cool Graphic T-shirt</div>
+                <div class="product-price">₹ 699</div>
+                                  
+  <div class="but">
+                <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Cool Graphic T-shirt">
+    <input type="hidden" name="product_price" value="699">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://media.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000005621928-Blue-Navy-1000005621928_01-2100.jpg" alt="Men's Track Pants">
+            <div class="product-info">
+                <div class="product-name">Comfort Fit Track Pants</div>
+                <div class="product-price">₹ 1099</div>
+                                  
+  <div class="but">
+                   <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Comfort Fit Track Pants">
+    <input type="hidden" name="product_price" value="1099">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://media.landmarkshops.in/cdn-cgi/image/h=1200,w=1200,q=85,fit=cover/lifestyle/1000015157036-Black-Black-1000015157036_01-2100.jpg" alt="Men's Casual Shorts">
+            <div class="product-info">
+                <div class="product-name">Lightweight Casual Shorts</div>
+                <div class="product-price">₹ 849</div>
+                                 
+  <div class="but">
+                     <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Lightweight Casual Shorts">
+    <input type="hidden" name="product_price" value="849">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://media.landmarkshops.in/cdn-cgi/image/h=1125,w=1125,q=85,fit=cover/lifestyle/1000015199414-Beige-Beige-1000015199414_01-2100.jpg" alt="Men's Sneakers">
+            <div class="product-info">
+                <div class="product-name">Sporty Casual Sneakers</div>
+                <div class="product-price">₹ 1599</div>
+                 <div class="but">
+                 <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Sporty Casual Sneakers">
+    <input type="hidden" name="product_price" value="1599">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="product-card">
+            <img src="https://media.landmarkshops.in/cdn-cgi/image/h=831,w=615,q=85,fit=cover/lifestyle/1000015183806-Black-Black-1000015183806_01-2100.jpg" alt="Men's Oversized T-shirt">
+            <div class="product-info">
+                <div class="product-name">Trendy Oversized T-shirt</div>
+                <div class="product-price">₹ 799</div>
+                                 
+  <div class="but">
+              <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Trendy Oversized T-shirt">
+    <input type="hidden" name="product_price" value="799">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>>
+               <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://media.landmarkshops.in/cdn-cgi/image/h=831,w=615,q=85,fit=cover/lifestyle/1000015029078-Blue-Blue-1000015029078_01-2100.jpg" alt="Men's Denim Jacket">
+            <div class="product-info">
+                <div class="product-name">Classic Denim Jacket</div>
+                <div class="product-price">₹ 2699</div>
+                                 
+  <div class="but">
+                  <form action="cart.php" method="POST">
+    <input type="hidden" name="product_name" value="Classic Denim Jacket">
+    <input type="hidden" name="product_price" value="2699">
+    <button type="submit" class="add-to-cart-btn">Cart</button>
+</form>>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Glamora.inc</h3>
+                <p>Your one-stop destination for the latest trends in fashion and beauty. We believe in bringing style and confidence to everyone.</p>
+            
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="men.html">Men's Fashion</a></li>
+                    <li><a href="women.html">Women's Fashion</a></li>
+                    <li><a href="kids.html">Kids' Fashion</a></li>
+                    <li><a href="beauty.html">Beauty Products</a></li>
+                    <li><a href="register.html">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section customer-service">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                   
+                </ul>
+            </div>
+            <div class="footer-section follow-us">
+                <h3>Follow Us</h3>
+                <p>Stay connected for exciting offers and updates!</p>
+               
+            </div>
+        </div>
+        <div class="footer-bottom">
+           Glamora
+        </div>
+    </footer>
+<script>
+// LocalStorage cart helpers (GitHub Pages friendly)
+const CART_KEY = 'glamora_cart_items';
+function getCartItems(){ const raw = localStorage.getItem(CART_KEY); return raw ? JSON.parse(raw) : []; }
+function setCartItems(items){ localStorage.setItem(CART_KEY, JSON.stringify(items)); }
+function addToCart(name, price){ const items = getCartItems(); items.push({ name, price }); setCartItems(items); alert(`${name} added to cart!`); }
+
+// Enhance legacy cart.php forms and buttons
+document.addEventListener('DOMContentLoaded', function(){
+  // Intercept old forms that posted to cart.php
+  document.querySelectorAll("form[action='cart.php']").forEach(function(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = (form.querySelector('[name="product_name"]').value || '').trim();
+      const price = Number(form.querySelector('[name="product_price"]').value || 0);
+      addToCart(name, price);
+    });
+  });
+
+  // Support .add-to-cart-btn without forms (extract from product card)
+  document.querySelectorAll('.add-to-cart-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      const info = btn.closest('.product-info') || document;
+      const nameEl = info.querySelector('.product-name');
+      const priceEl = info.querySelector('.product-price');
+      const name = nameEl ? nameEl.textContent.trim() : '';
+      const price = Number((priceEl ? priceEl.textContent : '').replace(/[^0-9.]/g, ''));
+      if (name) addToCart(name, price || 0);
+    });
+  });
+});
+</script>
+</body>
+</html>

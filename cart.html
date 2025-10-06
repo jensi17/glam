@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Glamora.inc</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f0f0f0; }
+        h1 { text-align: center; }
+        table { width: 80%; margin: 20px auto; border-collapse: collapse; background-color: #fff; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+        th { background-color: #000; color: white; }
+        .remove-btn { padding: 5px 10px; background-color: #e60023; color: white; border: none; cursor: pointer; border-radius: 4px; }
+        .back-shop { display: block; text-align: center; margin-top: 20px; }
+        .total { font-weight: bold; }
+        .empty { text-align: center; }
+        .actions { display: flex; justify-content: center; gap: 12px; margin-top: 12px; }
+        .btn { padding: 8px 12px; border: none; background: #000; color: #fff; border-radius: 4px; cursor: pointer; }
+        .btn.secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<h1>Your Shopping Cart</h1>
+
+<div id="cartContainer"></div>
+
+<a href="men.html" class="back-shop">← Back to Shop</a>
+
+<script>
+  const CART_KEY = 'glamora_cart_items';
+
+  function getCartItems() {
+    try {
+      const raw = localStorage.getItem(CART_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function setCartItems(items) {
+    localStorage.setItem(CART_KEY, JSON.stringify(items));
+  }
+
+  function removeItem(index) {
+    const items = getCartItems();
+    items.splice(index, 1);
+    setCartItems(items);
+    renderCart();
+  }
+
+  function clearCart() {
+    setCartItems([]);
+    renderCart();
+  }
+
+  function formatCurrency(v) { return `₹ ${v}`; }
+
+  function renderCart() {
+    const container = document.getElementById('cartContainer');
+    const items = getCartItems();
+    if (!items.length) {
+      container.innerHTML = '<p class="empty">Your cart is empty.</p>';
+      return;
+    }
+
+    const total = items.reduce((sum, it) => sum + Number(it.price || 0), 0);
+
+    const rows = items.map((it, i) => `
+      <tr>
+        <td>${i + 1}</td>
+        <td>${escapeHtml(it.name)}</td>
+        <td>${formatCurrency(it.price)}</td>
+        <td><button class="remove-btn" data-index="${i}">Remove</button></td>
+      </tr>`).join('');
+
+    container.innerHTML = `
+      <table>
+        <tr>
+          <th>#</th>
+          <th>Product Name</th>
+          <th>Price (₹)</th>
+          <th>Action</th>
+        </tr>
+        ${rows}
+        <tr>
+          <td colspan="2" class="total">Total</td>
+          <td colspan="2" class="total">${formatCurrency(total)}</td>
+        </tr>
+      </table>
+      <div class="actions">
+        <button class="btn secondary" id="clearCartBtn">Clear cart</button>
+      </div>
+    `;
+
+    container.querySelectorAll('.remove-btn').forEach(btn => {
+      btn.addEventListener('click', () => removeItem(Number(btn.dataset.index)));
+    });
+    const clearBtn = document.getElementById('clearCartBtn');
+    if (clearBtn) clearBtn.addEventListener('click', clearCart);
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
+  }
+
+  document.addEventListener('DOMContentLoaded', renderCart);
+</script>
+
+</body>
+</html>
+
+

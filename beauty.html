@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Essentials - Glamora.inc</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        .nav {
+            background-color: #080707;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav p {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .beauty-hero {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .beauty-hero h1 {
+            padding: 15px;
+            color: #333;
+        }
+        .beauty-hero img {
+            max-width: 100%;
+            height: auto;
+            display: block; 
+            margin: 0 auto; 
+        }
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <p>Glamora.inc</p>
+         <a href="home.html">Home</a>
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="beauty.html">Beauty</a>
+        <a href="register.html">Login</a>
+        <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="beauty-hero">
+        <h1>Unleash Your Inner Glow – Explore Our Beauty Collection!</h1>
+      </div>
+
+    <section id="skincare">
+        <h2>Skincare Essentials</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTc3KeuOEQ2AiFZLXzmFvVwvzJeW2myeH-5Xywytp64C4XrJP9y_UfagKVurY8RBwbic8dOoNTv8-D3-3-uHWmQGUQX3xZP2TvmtB90Qf9wtOJ3oukpHwsFcA" alt="Vitamin C Serum">
+                <div class="product-info">
+                    <div class="product-name">Dot n key kit</div>
+                    <div class="product-price">₹ 2200</div>
+                   <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Dot n key kit', 2200)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSW1jqMxBhylyz03RchB1wOVXvDMm0_wjySThukCQ5J70_mXZdQNcVmmUWtm6CzumxsPA4uCUoT9FvXzMfB4IA0hN0RMPjDMJv3vBplvTQWk3flVB5EcFp3" alt="Hydrating Moisturizer">
+                <div class="product-info">
+                    <div class="product-name">Deep Hydration Moisturizer</div>
+                    <div class="product-price">₹ 1350</div>
+                    <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Deep Hydration Moisturizer', 1350)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRYKjmgJnMpoN4TJ7TLER4q44eQ_xpfJA7snHGLOih1_hDhyeeY7wEnEYVo6WmNgAPH0QfJ7gHxsR74F6zsEuFkz2OjMMPL_6U2uB-UeMqlAWUYMR56XBvGTOB8ifDS2QVsRbHy7Q&usqp=CAc" alt="Sunscreen SPF 50">
+                <div class="product-info">
+                    <div class="product-name">face moisturizer n face wash</div>
+                    <div class="product-price">₹ 1000</div>
+                   <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('face moisturizer n face wash', 1000)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQxNIGeFp208CGPvaEA1U9ub8mZhvSUavLtxHew2ox18HqKUvAZaeeIeN9PO3OIPoRRv0s18KYQ4FbGDkU-JkPXJYd8LORGkRg2eQjLgdZbF20DUbJP7wTUic2ZBItuLgQRWTpl_A&usqp=CAc" alt="Gentle Cleanser">
+                <div class="product-info">
+                    <div class="product-name">Gentle Cleanser</div>
+                    <div class="product-price">₹ 600</div>
+                     <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Gentle Cleanser', 600)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="makeup">
+        <h2>Makeup Must-Haves</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTPo9x05u9tOe25buO9MY_T5OPPnQyVd41V-GvQ_wTbBRmWovmb9N0YSQzFZReUWF2TGqQBwJwr2NA0fPxRSJW7cKha84-Y1D8C2ruVKJkdbh8eWGYQRezv" alt="Liquid Foundation">
+                <div class="product-info">
+                    <div class="product-name">Flawless Liquid Foundation</div>
+                    <div class="product-price">₹600</div>
+                  <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Flawless Liquid Foundation', 600)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRTqGOQJ1KVZmnI3SeHiRaJxCvn_3Joq9tXGKOzDCAkIJRgu_1pJYsHcgXgEmzh_-Tq4N5SAkmcj2Qg-rexsBDVPmfkeX9UwSlAbw_MCHKFoL82sLmCOXVPfw" alt="Volumizing Mascara">
+                <div class="product-info">
+                    <div class="product-name">primer</div>
+                    <div class="product-price">₹850</div>
+                     <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('primer', 850)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcThIPLUg3Y8AvPeTdYAq6AfWRnnCkXV2PABUYEzrS0L1SMNgOLvO0A06Cdo9jmd7FTnP9sX1HYpGMfFnnEe8YNBeIXrX1Wff9llWtnnp-uLHhtiQisIdNKEoA" alt="Matte Lipstick Set">
+                <div class="product-info">
+                    <div class="product-name">Velvet Matte Lipstick Set</div>
+                    <div class="product-price">₹ 1100</div>
+                   <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Velvet Matte Lipstick Set', 1100)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTOWc14vqkb2fkiQ_HJhg-bi5SPgUj_PJpWUJ-2XaI06sqpnYJkqI3qsNvmLDl1CRnOrlhuXuYfpH1AxtESoiOV9_2eksL5yV5HHdjteaTtn5bKZJ2eHEjQ" alt="Eyeshadow Palette">
+                <div class="product-info">
+                    <div class="product-name">Blush</div>
+                    <div class="product-price">₹ 999</div>
+                  <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Blush', 999)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="haircare">
+        <h2>Luxurious Haircare</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSCTLClAXtYLOY0tq9puRnb9D7l45kQgyD53xXcHjf3oiJJKXzBTz3bOaUnJtQAgGduYAMGN_WOuH1hAli9Czg4eoh76QwXD3bdktRQNy_xvgfQ8P6kfGpMYg" alt="Volumizing Shampoo">
+                <div class="product-info">
+                    <div class="product-name">Blunt haircare kit</div>
+                    <div class="product-price">₹1470</div>
+                    <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Blunt haircare kit', 1470)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSWrem36K7HLUY_bFNLEynSmgCXFD1moXpAfOq1joP7O-ZeJ9avjXgfLY_4JDujPRgB1aDvBVNO4_0JlNhqbimhvM9GzSRzOZjNxu8pLv0oEru4VMeww_pKhQ" alt="Repairing Hair Mask">
+                <div class="product-info">
+                    <div class="product-name">Intensive Repair Hair Mask</div>
+                    <div class="product-price">₹ 499</div>
+                   <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Intensive Repair Hair Mask', 499)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR7aStqKtwPShPPy4Ig9lpYJpOM6hWXbLxOqt2JTinCcWusmR2IPkEMvLZfwMqDvKJYqxKPxN0t7rK5v8Np1_T-kTU2pIhSNYMk3A7nzSSqfDxybTwP_n1Vhw" alt="Argan Hair Oil">
+                <div class="product-info">
+                    <div class="product-name">Nourishing Hair Oil with shampoo</div>
+                    <div class="product-price">₹ 1250</div>
+                   <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Nourishing Hair Oil with shampoo', 1250)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQrskD1dfYtNZWPBwNpXQNx3LjGKsSPusvnPHls_n7MxZWZ4fjHiRii3WaY59nzraAv_cEPkHXXg_pN6nA6J1uDzNCK5EQGZzkaxvXuxfxZc-wOF3r6c1zU" alt="Heat Protectant Spray">
+                <div class="product-info">
+                    <div class="product-name">Heat serum</div>
+                    <div class="product-price">₹ 1500</div>
+                 <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Heat serum', 1500)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fragrance">
+        <h2>Captivating Fragrances</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRm1SXsMvCnB9KDEiPh9hKnTax3ZG9XS_xVamFGtfWRIScrBIBIiz08rgnwhEPiAya0OpEgEnslTxHRaiZlBoXyatn0F5P8SI-JXTecRcPBwzhoHrZEcqqQ" alt="Floral Perfume">
+                <div class="product-info">
+                    <div class="product-name">jaguar classic black</div>
+                    <div class="product-price">₹ 1800</div>
+                  <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('jaguar classic black', 1800)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTLEHC9T9uWq4XT4Ird-FHWH7_90Gxi5JJH8YlxxhDFozaU8u4t8P2p0rB4udHCVCBuiC4iVm0dNGAlk99JvpHtprvXF-det7pRozWzwUmt5t8ROG2QanxTPQ" alt="Musk Cologne">
+                <div class="product-info">
+                    <div class="product-name">Bellavita</div>
+                    <div class="product-price">₹ 1600</div>
+                    <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Bellavita', 1600)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQbXNez3ARzP4ZcXE2BudsS2U56QM46ojHCcq0bukeNysxiIDAb7I46QYzT7PXvTZIqEIZniTO1KIzhN8FrKvGgt-3D89U1esuivHAP7LU" alt="Fresh Scent">
+                <div class="product-info">
+                    <div class="product-name">Ocean Breeze Fresh Mist</div>
+                    <div class="product-price">₹ 1500</div>
+                     <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Ocean Breeze Fresh Mist', 1500)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSwuYYdIkAiqn4s3JWHvG09A1RuBeiI6ByoWYtlN9CZU6kOVXj9_Krdx7mB8MdJRtKF3iAI_bD0_3G1f2EMN3jhYpMj_NMae0YHy5ICOQavQVZddLZyIgSq" alt="Vanilla Perfume">
+                <div class="product-info">
+                    <div class="product-name"> Vanilla Bliss Perfume</div>
+                    <div class="product-price">₹ 1900</div>
+                     <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Vanilla Bliss Perfume', 1900)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Glamora.inc</h3>
+                <p>Your one-stop destination for the latest trends in fashion and beauty. We believe in bringing style and confidence to everyone.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="men.html">Men's Fashion</a></li>
+                    <li><a href="women.html">Women's Fashion</a></li>
+                    <li><a href="kids.html">Kids' Fashion</a></li>
+                    <li><a href="beauty.html">Beauty Products</a></li>
+                    <li><a href="register.html">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section customer-service">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section follow-us">
+                <h3>Follow Us</h3>
+                <p>Stay connected for exciting offers and updates!</p>
+                </div>
+        </div>
+        <div class="footer-bottom">
+            Glamora
+        </div>
+    </footer>
+<script>
+// LocalStorage cart (same approach as kids.html)
+const CART_KEY = 'glamora_cart_items';
+
+function getCartItems() {
+  const raw = localStorage.getItem(CART_KEY);
+  return raw ? JSON.parse(raw) : [];
+}
+
+function setCartItems(items) {
+  localStorage.setItem(CART_KEY, JSON.stringify(items));
+}
+
+function addToCart(name, price) {
+  const items = getCartItems();
+  items.push({ name, price });
+  setCartItems(items);
+  alert(`${name} added to cart!`);
+}
+
+// Keep existing Buy Now alert behavior
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.buynow').forEach(function(button){
+    button.addEventListener('click', function(e){
+      const card = e.target.closest('.product-card');
+      const productName = card.querySelector('.product-name').innerText;
+      const productPrice = card.querySelector('.product-price').innerText;
+      alert(`You clicked Buy Now for ${productName} (${productPrice})`);
+    });
+  });
+});
+</script>
+
+
+</body>
+</html>

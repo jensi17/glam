@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids' Fashion - Glamora.inc</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column; 
+            min-height: 100vh; 
+        }
+        .nav {
+            background-color: #060606;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav p {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .sale3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sale3 h1 {
+            padding: 15px;
+            color: #333;
+        }
+        .sale3 img {
+            max-width: 100%;
+            height: auto;
+            display: block;  
+            margin: auto; 
+        }
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #0a0808;
+        }
+       
+        /*footer*/
+        .main-content {
+            flex: 1; 
+        }
+
+    </style>
+</head>
+<body class="register2page">
+    <div class="nav">
+        <p>Glamora.inc</p>
+        <a href="home.html">Home</a>
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="beauty.html">Beauty</a>
+        <a href="register.html">Login</a>
+    </div>
+
+    <div class="main-content">
+        <div class="sale3">
+            <h1 style="text-align: center; padding: 15px;">Little Fashionistas, Big Style – Shop Kids' Wear!</h1>
+     
+        </div>
+
+        <h2>Kids' Categories To Bag</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/4/7/470039e1302988_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' T-shirt Set">
+                <div class="product-info">
+                    <div class="product-name">Playful T-shirt & Shorts Set</div>
+                    <div class="product-price">₹ 799</div>
+                     <div class="but">
+                 <button type="button" class="add-to-cart-btn" onclick="addToCart('Playful T-shirt & Shorts Set', 799)">Cart</button>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/3/a33844bAFORAF00000991_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' Party Dress">
+                <div class="product-info">
+                    <div class="product-name">Twirly Party Dress</div>
+                    <div class="product-price">₹ 1299</div>
+                  <div class="but">
+              <button type="button" class="add-to-cart-btn" onclick="addToCart('Twirly Party Dress', 1299)">Cart</button>
+               <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/b/5/b545095CJJMP2246C_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' Denim Jacket">
+                <div class="product-info">
+                    <div class="product-name">blue jumpsuit</div>
+                    <div class="product-price">₹ 1499</div>
+                     <div class="but">
+               <button type="button" class="add-to-cart-btn" onclick="addToCart('blue jumpsuit', 1499)">Cart</button>
+                <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/7/5732104AR6921-Red_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' Character Hoodie">
+                <div class="product-info">
+                    <div class="product-name">Favorite sweatshirt</div>
+                    <div class="product-price">₹949</div>
+                    <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Favorite sweatshirt', 949)">Cart</button>
+                <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/8/7/8735521AN64901NOffWhite_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' Casual Shoes">
+                <div class="product-info">
+                    <div class="product-name">White dress</div>
+                    <div class="product-price">₹1199</div>
+                     <div class="but">
+                 <button type="button" class="add-to-cart-btn" onclick="addToCart('White dress', 1199)">Cart</button>
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/8/8/889121aMA10003815311_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' Romper">
+                <div class="product-info">
+                    <div class="product-name">Cute & Cozy Romper</div>
+                    <div class="product-price">₹649</div>
+                    <div class="but">
+               <button type="button" class="add-to-cart-btn" onclick="addToCart('Cute & Cozy Romper', 649)">Cart</button>
+                <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Shop Kids' Toys</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/d/3/d3e0713GMIARC00000286_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' Backpack">
+                <div class="product-info">
+                    <div class="product-name">Giant teddy bear</div>
+                    <div class="product-price">₹ 599</div>
+                     <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Giant teddy bear', 599)">Cart</button>
+                <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/8/1/811b5f22543901_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' Hat">
+                <div class="product-info">
+                    <div class="product-name">Sunny Baseball Cap</div>
+                    <div class="product-price">₹ 349</div>
+                   <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Sunny Baseball Cap', 349)">Cart</button>
+                <button class="buynow">Buy now</button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/4/1/4138a7dDL3356COMBOOS_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' Hair Clips">
+                <div class="product-info">
+                    <div class="product-name">Sparkly Hair Clips Set</div>
+                    <div class="product-price">₹ 249</div>
+                     <div class="but">
+               <button type="button" class="add-to-cart-btn" onclick="addToCart('Sparkly Hair Clips Set', 249)">Cart</button>
+                <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR4SuvHcwGywTD3VxzB8gXNtu9l4tEvSIiVKZ_tPWvqTUJ6yZiNcjkKJ5xXDAn1LQVOV_an9EvePif3C8lJrFq2FaEjKBUufyQIzz8DfTxutj5uBt5a3-b0iniVUC_1mN29zYy1ntfRHcE&usqp=CAc" alt="Kids' Socks">
+                <div class="product-info">
+                    <div class="product-name">Colorful Ankle Socks (4-pack)</div>
+                    <div class="product-price">₹ 399</div>
+                    <div class="but">
+               <button type="button" class="add-to-cart-btn" onclick="addToCart('Colorful Ankle Socks (4-pack)', 399)">Cart</button>
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/c/1cd3becDTIAK0003_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' Sunglasses">
+                <div class="product-info">
+                    <div class="product-name">disney crown</div>
+                    <div class="product-price">₹ 299</div>
+                   <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('disney crown', 299)">Cart</button>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/6/6/66c8043LEY-2324118_1.jpg?rnd=20200526195200&tr=w-512" alt="Kids' Belt">
+                <div class="product-info">
+                    <div class="product-name">Kids rings</div>
+                    <div class="product-price">₹ 200</div>
+                  <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Kids rings', 200)">Cart</button>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Baby & Toddler Collection</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/5/550b48cNK_MIARC00006146_1.jpg?rnd=20200526195200&tr=w-1080" alt="Baby Bodysuit">
+                <div class="product-info">
+                    <div class="product-name">Toys</div>
+                    <div class="product-price">₹ 299</div>
+                    <div class="but">
+               <button type="button" class="add-to-cart-btn" onclick="addToCart('Toys', 299)">Cart</button>
+              <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/3/a364c688904351937928_1.jpg?rnd=20200526195200&tr=w-512" alt="Toddler Romper">
+                <div class="product-info">
+                    <div class="product-name">Toys</div>
+                    <div class="product-price">₹ 349</div>
+                     <div class="but">
+               <button type="button" class="add-to-cart-btn" onclick="addToCart('Toys', 349)">Cart</button>
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/f/1f80e1fDKST756B_1.jpg?rnd=20200526195200&tr=w-512" alt="Baby Pajama Set">
+                <div class="product-info">
+                    <div class="product-name">DOLL</div>
+                    <div class="product-price">249</div>
+                   <div class="but">
+               <button type="button" class="add-to-cart-btn" onclick="addToCart('DOLL', 249)">Cart</button>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button> </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/0/0/00954a1KH24-029_1.jpg?rnd=20200526195200&tr=w-512" alt="Toddler Shoes">
+                <div class="product-info">
+                    <div class="product-name">Accessories</div>
+                    <div class="product-price">₹ 99</div>
+                  <div class="but">
+                <button type="button" class="add-to-cart-btn" onclick="addToCart('Accessories', 99)">Cart</button>
+                  <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/1/2/1285659NARUAW24KBTSRT001319_1.jpg?rnd=20200526195200&tr=w-512" alt="Baby Bib Set">
+                <div class="product-info">
+                    <div class="product-name">tshirt</div>
+                    <div class="product-price">₹ 699</div>
+                    <div class="but">
+                 <button type="button" class="add-to-cart-btn" onclick="addToCart('tshirt', 699)">Cart</button>
+                 <button class="buynow"><a href="buynow.html">Buy now</a></button>
+                </div>
+                </div>
+            </div>
+           </div>
+           </div>
+    </div>
+
+    ---
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Glamora.inc</h3>
+                <p>Your one-stop destination for the latest trends in fashion and beauty. We believe in bringing style and confidence to everyone.</p>
+            
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="men.html">Men's Fashion</a></li>
+                    <li><a href="women.html">Women's Fashion</a></li>
+                    <li><a href="kids.html">Kids' Fashion</a></li>
+                    <li><a href="beauty.html">Beauty Products</a></li>
+                    <li><a href="register.html">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section customer-service">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                   
+                </ul>
+            </div>
+            <div class="footer-section follow-us">
+                <h3>Follow Us</h3>
+                <p>Stay connected for exciting offers and updates!</p>
+               
+            </div>
+        </div>
+        <div class="footer-bottom">
+           Glamora
+        </div>
+    </footer>
+<script>
+    const CART_KEY = 'glamora_cart_items';
+
+function getCartItems() {
+  const raw = localStorage.getItem(CART_KEY);
+  return raw ? JSON.parse(raw) : [];
+}
+
+function setCartItems(items) {
+  localStorage.setItem(CART_KEY, JSON.stringify(items));
+}
+
+function addToCart(name, price) {
+  const items = getCartItems();
+  items.push({ name, price });
+  setCartItems(items);
+  alert(`${name} added to cart!`);
+}
+
+</script>
+
+</body>
+</html>

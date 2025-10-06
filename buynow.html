@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Order - Glamora.inc</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        .nav {
+            background-color: #080707;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav p {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .payment-container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .payment-container h1 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        .order-summary {
+            background-color: #f0f8ff;
+            border: 1px dashed #a0d0f0;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            text-align: left;
+        }
+        .order-summary h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: center; 
+        }
+        .order-summary p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 8px 0;
+        }
+        .order-summary .total-amount {
+            font-size: 2em;
+            font-weight: bold;
+            color: #e60023; 
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .payment-form-section {
+            text-align: left; 
+            margin-top: 30px;
+        }
+        .payment-form-section h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #444;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box; 
+        }
+        .form-group textarea {
+            resize: vertical; 
+            min-height: 80px;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        .form-row .form-group {
+            flex: 1; 
+            margin-bottom: 0; 
+        }
+
+        .payment-form button {
+            background-color: #28a745; 
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.2s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .payment-form button:hover {
+            background-color: #218838;
+        }
+        .payment-message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+            display: none;
+        }
+        .error-message {
+            color: #dc3545; 
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: none; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <p>Glamora.inc</p>
+        <a href="home.html">Home</a>
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="beauty.html">Beauty</a>
+        <a href="register.html">Login</a>
+        <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="payment-container">
+        <h1>Complete Your Order</h1>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div id="paymentOrderItems">
+                </div>
+            <p class="total-amount">Grand Total: ₹ <span id="displayTotal">0.00</span></p>
+        </div>
+
+        <form class="payment-form" id="paymentForm">
+            <div class="payment-form-section">
+                <h2>Shipping Information</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" placeholder="Name" required>
+                    <p class="error-message" id="fullNameError"></p>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" placeholder="address" rows="3" required></textarea>
+                    <p class="error-message" id="addressError"></p>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" placeholder="city" required>
+                        <p class="error-message" id="cityError"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State:</label>
+                        <input type="text" id="state" placeholder="state" required>
+                        <p class="error-message" id="stateError"></p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="zipCode">Zip Code:</label>
+                        <input type="text" id="zipCode" placeholder="zipcode" required pattern="\d{6}" title="Please enter a 6-digit Indian Zip Code">
+                        <p class="error-message" id="zipCodeError"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" placeholder="phone number" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+                        <p class="error-message" id="phoneError"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="email" required>
+                    <p class="error-message" id="emailError"></p>
+                </div>
+            </div>
+
+            <div class="payment-form-section">
+                <h2>Payment Information</h2>
+                <div class="form-group">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" required pattern="\d{16}" title="Please enter a 16-digit card number.">
+                    <p class="error-message" id="cardNumberError"></p>
+                </div>
+                <div class="form-group">
+                    <label for="cardName">Name on Card:</label>
+                    <input type="text" id="cardName" placeholder="Full Name" required>
+                    <p class="error-message" id="cardNameError"></p>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date (MM/YY):</label>
+                        <input type="text" id="expiryDate" placeholder="MM/YY" required pattern="(0[1-9]|1[0-2])\/\d{2}" title="Please enter a valid expiry date (MM/YY).">
+                        <p class="error-message" id="expiryDateError"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" placeholder="XXX" required pattern="\d{3,4}" title="Please enter a 3 or 4 digit CVV.">
+                        <p class="error-message" id="cvvError"></p>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" id="placeOrderBtn">Place Order</button>
+            <p class="payment-message" id="paymentMessage">Processing your order...</p>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Glamora.inc</h3>
+                <p>Your one-stop destination for the latest trends in fashion and beauty. We believe in bringing style and confidence to everyone.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="men.html">Men's Fashion</a></li>
+                    <li><a href="women.html">Women's Fashion</a></li>
+                    <li><a href="kids.html">Kids' Fashion</a></li>
+                    <li><a href="beauty.html">Beauty Products</a></li>
+                    <li><a href="register.html">Login/Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-section customer-service">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section follow-us">
+                <h3>Follow Us</h3>
+                <p>Stay connected for exciting offers and updates!</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Glamora
+        </div>
+        <script>
+// Checkout page functionality
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Example: populate order summary from localStorage (or dummy data)
+    const paymentOrderItems = document.getElementById('paymentOrderItems');
+    const displayTotal = document.getElementById('displayTotal');
+
+    // For testing/demo purposes, let's use dummy items
+    const orderItems = [
+        { name: 'Dot n key kit', price: 2200 },
+        { name: 'Flawless Liquid Foundation', price: 600 }
+    ];
+
+    let total = 0;
+    orderItems.forEach(item => {
+        total += item.price;
+        const p = document.createElement('p');
+        p.textContent = `${item.name}: ₹${item.price}`;
+        paymentOrderItems.appendChild(p);
+    });
+
+    displayTotal.textContent = total.toFixed(2);
+
+    // Form validation and submission
+    const paymentForm = document.getElementById('paymentForm');
+    const paymentMessage = document.getElementById('paymentMessage');
+
+    paymentForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // prevent actual form submission
+
+        // Simple validation (can expand)
+        const inputs = paymentForm.querySelectorAll('input, textarea');
+        let valid = true;
+
+        inputs.forEach(input => {
+            const errorEl = document.getElementById(input.id + 'Error');
+            if (!input.checkValidity()) {
+                valid = false;
+                errorEl.textContent = input.title || 'This field is required';
+                errorEl.style.display = 'block';
+            } else {
+                errorEl.textContent = '';
+                errorEl.style.display = 'none';
+            }
+        });
+
+        if (!valid) return;
+
+        // Show success message
+        paymentMessage.style.display = 'block';
+        paymentMessage.textContent = 'Thank you! Your order has been placed successfully.';
+
+        // Optionally, reset form
+        paymentForm.reset();
+    });
+});
+</script>
+
+    </footer>
+
+</body>
+</html>
